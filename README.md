@@ -1,3 +1,32 @@
+Kubectl 
+
+1. Update package list
+~~~groovy
+sudo apt-get update
+~~~
+2. Install transport & curl
+~~~groovy
+sudo apt-get install -y apt-transport-https ca-certificates curl gnupg
+~~~
+ 3. Add Google Cloud public signing key
+~~~groovy
+curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+~~~
+4. Add the Kubernetes APT repo
+~~~groovy
+echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | \
+sudo tee /etc/apt/sources.list.d/kubernetes.list
+~~~
+
+
+ 5. Install kubectl
+~~~groovy
+sudo apt-get install -y kubectl
+~~~
+~~~groovy
+sudo snap install kubectl --classic
+~~~
+
 To run a Pod 
 
  open or create a file named pod.yml
