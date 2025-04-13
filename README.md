@@ -28,6 +28,39 @@ sudo apt-get install -y kubectl
 sudo snap install kubectl --classic
 ~~~
 
+Minikube Installation 
+
+ 1. Update package list
+~~~groovy
+sudo apt-get update -y
+~~~
+2. Install dependencies
+~~~groovy
+sudo apt-get install -y curl wget apt-transport-https
+~~~
+ 3. Download Minikube binary
+~~~groovy
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+~~~
+4. Install the binary
+~~~groovy
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+~~~
+5. Check installation
+~~~groovy
+minikube version
+~~~
+ Install Virtualization Driver (Docker is recommended)
+~~~groovy
+sudo apt-get install -y docker.io
+sudo usermod -aG docker $USER
+newgrp docker
+~~~
+Start Minikube
+~~~groovy
+minikube start --driver=docker
+
+~~~
 To run a Pod 
 
  open or create a file named pod.yml
