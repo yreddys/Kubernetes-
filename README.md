@@ -1,4 +1,4 @@
-Kubectl 
+Kubectl installation
 
 1. Update package list
 ~~~groovy
@@ -23,6 +23,7 @@ sudo tee /etc/apt/sources.list.d/kubernetes.list
 ~~~groovy
 sudo apt-get install -y kubectl
 ~~~
+ If it still fails, just go with Snap (Quick Fix)
 ~~~groovy
 sudo snap install kubectl --classic
 ~~~
